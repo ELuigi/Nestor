@@ -3,12 +3,10 @@
 #include <Motor.h>
 
 DigitalOut ActivityLed(PA_5);
-Motor MainMotor;
+Motor MainMotor(MotorLeftForward,MotorLeftBackward,MotorRightForward,MotorRightBackward);
 //specify period duration
 
 int main() {
-
-
     while(1)
     {
        ActivityLed = 1; // LED is ON
@@ -18,7 +16,7 @@ int main() {
        MainMotor.TurnRight(0.5);
       wait(10); // 1 sec
       ActivityLed = 1;
-      MainMotor.Movefront(0.5);
+      MainMotor.MoveFront(0.5);
       wait(10); // 1 sec
       ActivityLed = 0;
       MainMotor.MoveBack(0.5);

@@ -7,13 +7,15 @@
 class Motor
 {
   private:
-    PwmOut MotorLF(MotorLeftForward);
-    PwmOut MotorLB(MotorLeftBackward);
-    PwmOut MotorRF(MotorRightForward);
-    PwmOut MotorRB(MotorRightBackward);
+
+    PwmOut* MotorLF;
+    PwmOut* MotorLB;
+    PwmOut* MotorRF;
+    PwmOut* MotorRB;
 
   public:
-    Motor();
+
+    Motor(PinName LF,PinName LB,PinName RF, PinName RB);
     void TurnLeft(float speed);
     void TurnRight(float speed);
     void MoveFront(float speed);
