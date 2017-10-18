@@ -1,16 +1,26 @@
 #include <mbed.h>
 #include <target.h>
 
-DigitalOut ActivityLed(LED_PIN);
+DigitalOut ActivityLed(PA_5);
 PwmOut PwmLeft(MotorLeft);
 PwmOut PwmRight(MotorRight);
 
-int main() {
-    while(1) {
-        ActivityLed = 1; // LED is ON
+//specify period duration
 
-        wait(0.2); // 200 ms
-        ActivityLed = 0; // LED is OFF
-        wait(1.0); // 1 sec
+int main() {
+
+PwmLeft.period_ms(20); //50Hz
+PwmRight.period_ms(10); //100Hz
+ActivityLed.write(0.5f);
+    while(1) {
+      PwmLeft.pulsewidth_ms(1);
+      PwmRight.pulsewidth_ms(5);
+       ActivityLed = 1; // LED is ON
+        wait(10); // 200 ms
+      ActivityLed = 0;
+          PwmLeft.pulsewidth_ms(10); // LED is OFF
+        PwmRight.pulsewidth_ms(15);
+
+        wait(10); // 1 sec
     }
 }

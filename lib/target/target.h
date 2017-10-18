@@ -7,7 +7,10 @@
 
 /*###################### PWM output ###################################*/
 
+//signal port of pwm output of motors
 #define MotorLeft   PB_0
 #define MotorRight  PA_1
+//Period of PWM signal 
+#define PWMPeriodMs 20
 
 #endif
