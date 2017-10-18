@@ -7,8 +7,10 @@
 class Motor
 {
   private:
-    PwmOut MotorL(MotorLeft);
-    PwmOut MotorR(MotorRight);
+    PwmOut MotorLF(MotorLeftForward);
+    PwmOut MotorLB(MotorLeftBackward);
+    PwmOut MotorRF(MotorRightForward);
+    PwmOut MotorRB(MotorRightBackward);
 
   public:
     Motor();

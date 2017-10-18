@@ -2,8 +2,10 @@
 
     Motor()
     {
-      MotorL.period_ms(PWMPeriodMs);
-      MotorR.period_ms(PWMPeriodMs);
+      MotorLF.period_ms(PWMPeriodMs);
+      MotorLB.period_ms(PWMPeriodMs);
+      MotorRF.period_ms(PWMPeriodMs);
+      MotorRB.period_ms(PWMPeriodMs);
     }
     void TurnLeft();
     void TurnRight();
