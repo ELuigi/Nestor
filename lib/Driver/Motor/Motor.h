@@ -16,7 +16,7 @@ class Motor
     Motor();
     void TurnLeft(float speed);
     void TurnRight(float speed);
-    void Movefront(float speed);
+    void MoveFront(float speed);
     void MoveBack(float speed);
 
 };

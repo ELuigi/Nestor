@@ -22,7 +22,7 @@
         MotorRL.write(0);
         MotorRB.write(speed);
     }
-    void Movefront(float speed)
+    void MoveFront(float speed)
     {
       MotorLF.write(speed);
       MotorLB.write(0);

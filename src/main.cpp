@@ -1,18 +1,27 @@
 #include <mbed.h>
 #include <target.h>
+#include <Motor.h>
 
 DigitalOut ActivityLed(PA_5);
-
+Motor MainMotor;
 //specify period duration
 
 int main() {
 
-ActivityLed.write(0.5f);
-    while(1) {
-       ActivityLed = 1; // LED is ON
-        wait(10); // 200 ms
-      ActivityLed = 0;
 
-        wait(10); // 1 sec
+    while(1)
+    {
+       ActivityLed = 1; // LED is ON
+       MainMotor.TurnLeft(0.5);
+       wait(10); // 200 ms
+       ActivityLed = 0;
+       MainMotor.TurnRight(0.5);
+      wait(10); // 1 sec
+      ActivityLed = 1;
+      MainMotor.Movefront(0.5);
+      wait(10); // 1 sec
+      ActivityLed = 0;
+      MainMotor.MoveBack(0.5);
+      wait(10); // 1 se
     }
 }
