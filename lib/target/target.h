@@ -7,7 +7,7 @@
 
 /*###################### PWM output ###################################*/
 
-#define MotorLeft   PA_2
-#define MotorRight  PA_3
+#define MotorLeft   PB_0
+#define MotorRight  PA_1
 
 #endif
