@@ -14,10 +14,10 @@ class Motor
 
   public:
     Motor();
-    void TurnLeft();
-    void TurnRight();
-    void Movefront();
-    void MoveBack();
+    void TurnLeft(int speed);
+    void TurnRight(int speed);
+    void Movefront(int speed);
+    void MoveBack(int speed);
 
 };
 
