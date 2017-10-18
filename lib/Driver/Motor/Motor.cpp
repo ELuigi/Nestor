@@ -7,19 +7,19 @@
       MotorRF.period_ms(PWMPeriodMs);
       MotorRB.period_ms(PWMPeriodMs);
     }
-    void TurnLeft(int speed)
+    void TurnLeft(float speed)
     {
 
     }
-    void TurnRight(int speed)
+    void TurnRight(float speed)
+    {
+        MotorLF.write(speed);
+    }
+    void Movefront(float speed)
     {
 
     }
-    void Movefront(int speed)
-    {
-
-    }
-    void MoveBack(int speed)
+    void MoveBack(float speed)
     {
 
     }
