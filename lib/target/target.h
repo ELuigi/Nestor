@@ -3,7 +3,7 @@
 
 /*###################### Activity led ###################################*/
 
-#define LED_PIN     PC_0
+#define LED_PIN                 PC_0
 
 /*###################### PWM output ###################################*/
 
@@ -13,6 +13,13 @@
 #define MotorRightForward       PC_8
 #define MotorRightBackward      PC_6
 //Period of PWM signal
-#define PWMPeriodMs 20
+#define PWMPeriodMs             20
+
+/*###################### SPI MPU9250 ###################################*/
+
+//SPI port for communication with MPU
+#define SpiClk                  PB_13
+#define SpiMosi                 PB_15
+#define SpiMiso                 PB_14
 
 #endif
