@@ -1,5 +1,5 @@
-#ifndef __MOTOR_H
-#define __MOTOR_H
+#ifndef __MPU9250_H
+#define __MPU9250_H
 
 #include <mbed.h>
 #include <target.h>
