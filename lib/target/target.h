@@ -22,4 +22,7 @@
 #define SpiMosi                 PB_15
 #define SpiMiso                 PB_14
 
+/*###################### PWM input ###################################*/
+
+
 #endif
