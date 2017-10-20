@@ -23,8 +23,8 @@
 #include "RC_PWM.h"
 
 RcPwm::RcPwm(PinName p) : _p(p) {
-   _p.rise(this, &PwmIn::rise);
-   _p.fall(this, &PwmIn::fall);
+   _p.rise(this, &RcPwm::rise);
+   _p.fall(this, &RcPwm::fall);
    _period = 0.0;
    _pulsewidth = 0.0;
    _t.start();

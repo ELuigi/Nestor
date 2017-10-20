@@ -30,7 +30,7 @@ class RcPwm
 {
 public:
     
-    PwmIn(PinName p);
+    RcPwm(PinName p);
     
     float period();
     
