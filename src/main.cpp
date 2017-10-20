@@ -10,6 +10,7 @@ Serial Computer(USBTX, USBRX);
 
 int main() {
   Computer.baud(9600);
+  Computer.printf("Starting communication...");
     while(1)
     {
       ActivityLed = 1; // LED is ON
