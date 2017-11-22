@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
- 
+
 #include "RC_PWM.h"
 
 RcPwm::RcPwm(PinName p) : _p(p) {
@@ -43,10 +43,10 @@ float RcPwm::dutycycle() {
 }
 
 void RcPwm::rise() {
-   _period = _t.read();
+   _period = _t.read_us();
    _t.reset();
 }
 
 void RcPwm::fall() {
-   _pulsewidth = _t.read();
+   _pulsewidth = _t.read_us();
 }

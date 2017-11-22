@@ -29,21 +29,21 @@
 class RcPwm
 {
 public:
-    
+
     RcPwm(PinName p);
-    
+
     float period();
-    
-    
+
+
     float pulsewidth();
-    
-    
+
+
     float dutycycle();
- 
-protected:        
+
+protected:
     void rise();
     void fall();
-    
+
     InterruptIn _p;
     Timer _t;
     float _pulsewidth, _period;
