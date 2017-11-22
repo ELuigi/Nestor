@@ -24,5 +24,10 @@
 
 /*###################### PWM input ###################################*/
 
+#define PWMIn1                  PC13 //Nucleo user button
+
+//Period of PWM read signal
+
+#define PWMPeriodReadMs         20
 
 #endif
